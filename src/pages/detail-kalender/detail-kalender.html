@@ -1,0 +1,58 @@
+<!--
+  Generated template for the DetailKalenderPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="navbarColor">
+    <ion-title>{{ detail?.fullDate | date : "dd MMMM y" }}</ion-title>
+    <!-- <ion-buttons end *ngIf="group === 'WaliKelas' && !isEdit">
+      <button ion-button class="icon-header" (click)="buatKegiatan()">
+        <ion-icon name="create"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end *ngIf="group === 'WaliKelas' && isEdit">
+      <button ion-button class="icon-header" (click)="cancelKegiatan()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons> -->
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="background-content" padding>
+  <div *ngIf="!isEdit">
+    <div class="kegiatan-title">
+      {{ (detail?.namaKegiatan) ? detail?.namaKegiatan : 'Tidak ada kegiatan' }}
+    </div>
+    <div class="{{ (detail?.keterangan) ? 'kegiatan-detail' : '' }}">
+      <p>
+        {{ (detail?.keterangan) ? detail?.keterangan : '' }}
+      </p>
+    </div>
+  </div>
+  <!-- <div *ngIf="isEdit">
+    <ion-list>
+      <ion-item>
+        <ion-label>Kegiatan</ion-label>
+        <ion-select [(ngModel)]="idKegiatan">
+          <ion-option *ngFor="let option of kegiatanList" value="{{ option.value }}">
+            {{ option.label }}
+          </ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-textarea rows="10" placeholder="Keterangan" value="{{ (detail?.keterangan) ? detail?.keterangan : '' }}"></ion-textarea>
+      </ion-item>
+    </ion-list>
+  </div> -->
+</ion-content>
+
+<!-- <ion-footer *ngIf="group === 'WaliKelas' && isEdit">
+  <div class="btn-footer">
+    Simpan
+  </div>
+</ion-footer> -->

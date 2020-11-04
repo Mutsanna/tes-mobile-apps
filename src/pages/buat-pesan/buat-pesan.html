@@ -1,0 +1,19 @@
+<ion-header>
+	<ion-navbar>
+    	<ion-title>Buat Pesan Baru</ion-title>
+  	</ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+	<div *ngIf="banyakKelas" id="pilih_kelas">
+		<ion-label class="judul">Pilih Kelas</ion-label>
+		<button ion-button full (click)="selectKelas()">{{ cbView }}</button>
+	</div>
+	<ion-list>
+	    <button ion-item *ngFor="let siswa of siswaList" icon-right color="light" full (click)="pesanSelected(siswa)">
+	      	{{ siswa.nis }} - {{ siswa.namaSiswa }}
+	      	<ion-icon name="arrow-forward" class="icons"></ion-icon>
+	    </button>
+  	</ion-list>
+</ion-content>

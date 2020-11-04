@@ -1,0 +1,45 @@
+page-home {
+	.background-content {
+		background-image: url(../img/backgroundwave2.png);
+		background-size: cover;
+	}
+
+	#banner {
+		background-image: url(../img/header.png);
+		background-size: cover;
+		height: 20%;
+	}
+
+	.notif-badges {
+		position: absolute;
+		top: 1px;
+		right: 1px;
+	}
+
+	.header-right {
+		position: absolute;
+		right: 0px;
+		background-color: #4cc7ff;
+		height: 20%;
+		width: 50%;
+	}
+
+	.header-left {
+		position: absolute;
+		left: 0px;
+		background-color: #ff7de7;
+		height: 20%;
+		width: 50%;
+	}
+
+	.header-number {
+		text-align: center;
+		color: white;
+	}
+
+	.header-number2 {
+		text-align: center;
+		color: black;
+	}
+}
+

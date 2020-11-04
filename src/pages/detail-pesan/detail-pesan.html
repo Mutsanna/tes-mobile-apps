@@ -1,0 +1,71 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>Detail Pesan</ion-title>
+	</ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="background-content">
+	<ion-list #content_id>
+		<div *ngFor="let pesan of pesanList">
+			<ion-card class="card-isi-left" *ngIf="pesan.pos">
+				<ion-card-content>
+					{{ pesan.isi }}
+				</ion-card-content>
+			</ion-card>
+			<ion-card class="card-isi-right" *ngIf="!pesan.pos">
+				<ion-card-content>
+					{{ pesan.isi }}
+				</ion-card-content>
+			</ion-card>
+		</div>
+		<ion-card>
+
+		</ion-card>
+		<ion-card>
+
+		</ion-card>
+		<ion-card>
+
+		</ion-card>
+	</ion-list>
+	<div class="test">
+		<!-- <ion-input class="isi-input" type="text" placeholder="Ketik pesan..." [(ngModel)]="isi"></ion-input> -->
+		<!-- <ion-textarea class="isi-input" rows="2" [(ngModel)]="isi"></ion-textarea>
+		<button ion-button icon-only class="icon-kirim" (click)="send()">
+			<ion-icon name="send"></ion-icon>
+		</button> -->
+		<!-- <span id="tb_cont">
+    		<input type="text" placeholder="Search" id="q" name="q" style="width: 100%;border-style: inset;border-radius: 20px;height: 55px;">
+    		<span id="clear_input"><ion-icon name="send"></ion-icon></span>
+		</span> -->
+		<!-- <ion-item style="position: absolute;bottom: 0px;">
+			<ion-textarea rows="1" placeholder="Ketik pesan..." id="messageInputBox" [(ngModel)]="isi" (input)="change()"></ion-textarea>
+			<button ion-button icon-only class="icon-kirim" clear item-right (click)="send()">
+				<ion-icon name="send"></ion-icon>
+			</button>
+		</ion-item> -->
+	</div>
+</ion-content>
+
+<!-- <ion-footer>
+	<ion-grid>
+		<ion-row>
+			<ion-col col-9 text-center>
+				<ion-input class="isi-input" type="text" placeholder="Pesan" [(ngModel)]="isi"></ion-input>
+			</ion-col>
+			<ion-col text-center>
+				<button ion-button class="icon-kirim" (click)="send()"><ion-icon name="send"></ion-icon></button>	
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-footer> -->
+
+<ion-footer>
+	<ion-item>
+		<textarea rows="1" placeholder="Ketik pesan..." id="messageInputBox" [(ngModel)]="isi" (input)="change2()" style="border: none; overflow: auto; outline: none; width: 100%;resize: none;"></textarea>
+		<button ion-button icon-only class="icon-kirim" clear item-right (click)="send()">
+			<ion-icon name="send"></ion-icon>
+		</button>
+	</ion-item>
+</ion-footer>

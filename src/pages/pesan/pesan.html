@@ -1,0 +1,30 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>Buku Penghubung</ion-title>
+		<ion-buttons end *ngIf="group === 'WaliKelas'">
+		    <button ion-button class="icon-header" (click)="buatPesan()">
+		    	Buat Pesan
+		    </button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="background-content">
+	<div id="list_header" *ngIf="count === 0">
+		<ion-grid class="grid-custom">
+			<ion-row>
+				<ion-col col-8>
+					Tidak ada pesan
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</div>
+	<ion-list>
+	    <button ion-item *ngFor="let pesan of pesanList" icon-right color="light" full (click)="pesanSelected(pesan)">
+	      	{{ pesan.nama }} &nbsp;
+	      	<ion-badge class="notif-badges" color="danger" *ngIf="pesan.ur > 0">{{ pesan.ur }}</ion-badge>
+	      	<ion-icon name="arrow-forward" class="icons"></ion-icon>
+	    </button>
+  	</ion-list>
+</ion-content>

@@ -1,0 +1,74 @@
+page-nilai-detail-general {
+  .background-content {
+    background-image: url(../img/backgroundwave2.png);
+    background-size: cover;
+  }
+
+  ion-select {
+    max-width: 60% !important;
+  }
+
+  .select-text {
+    color: white;
+  }
+
+  .item-cover {
+    left: 250px !important;
+  }
+
+  .card-cust {
+    margin-top: 2vh;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background: linear-gradient(to right, #396afc, #464d93);
+    padding: 10px;
+    border-radius: 20px;
+    min-height: 130px;
+
+    ion-label {
+      color: white;
+      font-size: 1.2em;
+    }
+    .txt-saldo {
+      text-align: right;
+    }
+  }
+
+  .list_header {
+    background-color: #7fe67f;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .list_body {
+    padding-left: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 0.95em;
+  }
+
+  .list_footer {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: initial;
+    text-align: center;
+  }
+
+  .grid-custom {
+		padding: 0px;
+  }
+  
+  .empty-state {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    margin-top: 5px;
+  }
+}

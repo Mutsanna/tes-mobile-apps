@@ -1,0 +1,28 @@
+<ion-header id="header">
+	<ion-navbar>
+		<ion-title>Buat Informasi</ion-title>
+	</ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="background-content">
+	<div *ngIf="banyakKelas">
+		<ion-label class="judul">Pilih Kelas</ion-label>
+		<button ion-button full (click)="selectKelas()">{{ cbView }}</button>
+	</div>
+	<div>
+		<ion-label class="judul">Judul</ion-label>
+		<ion-item no-lines>
+			<ion-input class="judul-input" type="text" [(ngModel)]="judul"></ion-input>
+		</ion-item>
+	</div>
+	<div>
+		<ion-label class="judul">Isi</ion-label>
+		<ion-item no-lines>
+			<ion-textarea class="isi-input" rows="10" [(ngModel)]="isi"></ion-textarea>
+		</ion-item>
+	</div>
+	<div>
+		<button ion-button class="broadcast" (click)="broadcast()">Send</button>
+	</div>
+</ion-content>

@@ -1,0 +1,53 @@
+Pas mau dibuild apk --prod
+jangan diremove dulu platform androidnya, copy
+dulu file build.gradle buat nyamain configurasinya
+
+// Allow plugins to declare Maven dependencies via build-extras.gradle.
+allprojects {
+    repositories {
+        mavenCentral();
+        maven { url 'https://maven.google.com' }
+        jcenter()
+    }
+}
+
+// compileSdkVersion cdvCompileSdkVersion
+// buildToolsVersion cdvBuildToolsVersion
+compileSdkVersion 26
+buildToolsVersion cdvBuildToolsVersion
+
+
+// onesignal
+ionic cordova plugin add onesignal-cordova-plugin
+npm install --save @ionic-native/onesignal@4
+
+//scanner
+ionic cordova plugin add phonegap-plugin-barcodescanner
+npm install --save @ionic-native/barcode-scanner@4
+
+//themeable browser
+ionic cordova plugin add cordova-plugin-themeablebrowser
+npm install --save @ionic-native/themeable-browser@4
+
+//ngx-qrcode2
+npm install ngx-qrcode2 --save
+
+//chartjs
+npm install chart.js 
+
+ionic cordova plugin add cordova-plugin-statusbar
+ionic cordova plugin add cordova-plugin-splashscreen
+cordova plugin add cordova-plugin-whitelist
+
+Kalo mau release apk baca disini
+https://ionicframework.com/docs/v1/guide/publishing.html
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore HelloWorld-release-unsigned.apk alias_name
+zipalign -v 4 HelloWorld-release-unsigned.apk HelloWorld.apk
+
+alias_name = madanissibnuabbas
+password = madanischoolsystem
+
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore mss-ibnuabbas.keystore app-release-unsigned.apk madanissibnuabbas
+zipalign -v 4 app-release-unsigned.apk MSS-IbnuAbbas-v0.0.4.apk
+
+<engine name="android" spec="6.3.0" />

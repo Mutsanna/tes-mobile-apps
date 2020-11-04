@@ -1,0 +1,67 @@
+<ion-header>
+  	<ion-navbar>
+    	<ion-title>Absensi</ion-title>
+  	</ion-navbar>
+</ion-header>
+
+
+<ion-content>
+	<div>
+		<ion-badge class="toolbar-badge" color="light">
+			<ion-grid>
+				<ion-row>
+					<ion-col text-left>
+						<ion-label class="text-nis">{{ nis }}</ion-label>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col text-left>
+						<ion-label class="text-name">{{ name }}</ion-label>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col text-left>
+						<ion-label class="text-class">{{ class }}</ion-label>
+					</ion-col>
+					<ion-col text-right>
+						<ion-datetime class="text-date" displayFormat="DD-MM-YYYY" [(ngModel)]="date"></ion-datetime>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</ion-badge>
+	</div>
+	<div id="list_header">
+		<ion-grid class="grid-custom">
+			<ion-row>
+				<ion-col col-8>
+					Durasi
+				</ion-col>
+				<ion-col>
+					Waktu
+				</ion-col>
+				<ion-col>
+					Ket
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</div>
+	<div id="list_body" ion-item *ngFor="let l of list" style="">
+		<ion-grid class="grid-custom">
+			<ion-row>
+				<ion-col col-8>
+					<ion-icon ios="ios-arrow-forward" md="ios-arrow-forward" *ngIf="l.durasi !== 'SISWA DATANG' && l.durasi !== 'SISWA PULANG'"></ion-icon>
+					{{ l.durasi }}
+				</ion-col>
+				<ion-col>
+					{{ l.waktu }}
+				</ion-col>
+				<ion-col>
+					{{ l.keterangan }}
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</div>
+	<div id="list_footer">
+		[T] Tepat Waktu, [L] Lambat, [I] Izin, [S] Sakit, [A] Alpa
+	</div>
+</ion-content>

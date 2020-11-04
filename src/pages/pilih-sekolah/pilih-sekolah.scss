@@ -1,0 +1,17 @@
+page-pilih-sekolah {
+    .background-content {
+		background-image: url(../img/backgroundwave2.png);
+		background-size: cover;
+    }
+    
+    .div-logo {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .img-logo {
+        border-radius: 25px;
+        width: 100%;
+    }
+}

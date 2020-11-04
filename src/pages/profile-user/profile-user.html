@@ -1,0 +1,131 @@
+<ion-header>
+  	<ion-navbar>
+    	<ion-title>Profile</ion-title>
+  	</ion-navbar>
+</ion-header>
+
+
+<ion-content>
+	<div class="body_login">
+      	<ion-row>
+        	<ion-col>
+          		<ion-list inset >
+          			<ion-item *ngIf="group === 'guru'">
+              			<ion-label class="label-input" stacked>
+                			NUPTK
+              			</ion-label>
+              			<ion-input  type="text" placeholder="{{ NUPTK }}" readonly></ion-input>
+            		</ion-item>
+            		<ion-item *ngIf="group === 'siswa'">
+              			<ion-label class="label-input" stacked>
+                			NISN
+              			</ion-label>
+              			<ion-input  type="text" placeholder="{{ NISN }}" readonly></ion-input>
+            		</ion-item>
+            		<ion-item *ngIf="group === 'siswa'">
+              			<ion-label class="label-input" stacked>
+                			NIS
+              			</ion-label>
+              			<ion-input  type="text" placeholder="{{ NIS }}" readonly></ion-input>
+            		</ion-item>
+            		<ion-item>
+              			<ion-label class="label-input" stacked>
+                			Nama
+              			</ion-label>
+              			<ion-input  type="text" placeholder="{{ namaSiswa }}" readonly></ion-input>
+            		</ion-item>
+            		<ion-item>
+              			<ion-label class="label-input" stacked>
+                			Tempat Lahir
+              			</ion-label>
+              			<ion-input  type="text" placeholder="{{ tempatLahir }}" readonly></ion-input>
+            		</ion-item>
+            		<ion-item>
+              			<ion-label class="label-input" stacked>
+                			Tanggal Lahir
+              			</ion-label>
+              			<ion-input  type="text" placeholder="{{ tanggalLahir }}" readonly></ion-input>
+            		</ion-item>
+            		<ion-item>
+              			<ion-label class="label-input" stacked>
+                			Jenis Kelamin
+              			</ion-label>
+              			<ion-input  type="text" placeholder="{{ jenisKelamin }}" readonly></ion-input>
+            		</ion-item>
+            		<ion-item *ngIf="group === 'guru'">
+              			<ion-label class="label-input" stacked>
+                			Status Kawin
+              			</ion-label>
+              			<ion-input  type="text" placeholder="{{ statusKawin }}" readonly></ion-input>
+            		</ion-item>
+            		<ion-item>
+              			<ion-label class="label-input" stacked>
+                			Agama
+              			</ion-label>
+              			<ion-input  type="text" placeholder="{{ agama }}" readonly></ion-input>
+            		</ion-item>
+            		<ion-item>
+              			<ion-label class="label-input" stacked>
+                			Golongan Darah
+              			</ion-label>
+              			<ion-input  type="text" placeholder="{{ golonganDarah }}" readonly></ion-input>
+            		</ion-item>
+            		<ion-item>
+              			<ion-label class="label-input" stacked>
+                			Alamat
+              			</ion-label>
+              			<ion-textarea placeholder="{{ alamat }}" rows="5" readonly></ion-textarea>
+            		</ion-item>
+            		<ion-item *ngIf="group === 'siswa'">
+              			<ion-label class="label-input" stacked>
+                			Kota
+              			</ion-label>
+              			<ion-input  type="text" placeholder="{{ kota }}" readonly></ion-input>
+            		</ion-item>
+            		<ion-item>
+              			<ion-label class="label-input" stacked>
+                			No Telp
+              			</ion-label>
+              			<ion-input  type="text" placeholder="{{ noTelp }}" readonly></ion-input>
+            		</ion-item>
+            		<ion-item *ngIf="group === 'guru'">
+              			<ion-label class="label-input" stacked>
+                			Jenis Pegawai
+              			</ion-label>
+              			<ion-input  type="text" placeholder="{{ jenisPegawai }}" readonly></ion-input>
+            		</ion-item>
+            		<ion-item *ngIf="group === 'guru'">
+              			<ion-label class="label-input" stacked>
+                			Jabatan
+              			</ion-label>
+              			<ion-input  type="text" placeholder="{{ jabatan }}" readonly></ion-input>
+            		</ion-item>
+            		<ion-item *ngIf="group === 'guru'">
+              			<ion-label class="label-input" stacked>
+                			Golongan
+              			</ion-label>
+              			<ion-input  type="text" placeholder="{{ golongan }}" readonly></ion-input>
+            		</ion-item>
+            		<ion-item *ngIf="group === 'siswa'">
+              			<ion-label class="label-input" stacked>
+                			Nama Orang TUa
+              			</ion-label>
+              			<ion-input  type="text" placeholder="{{ namaOrangTua }}" readonly></ion-input>
+            		</ion-item>
+            		<ion-item *ngIf="group === 'siswa'">
+              			<ion-label class="label-input" stacked>
+                			No Telp Orang Tua
+              			</ion-label>
+              			<ion-input  type="text" placeholder="{{ telpOrangTua }}" readonly></ion-input>
+            		</ion-item>
+            		<ion-item *ngIf="group === 'siswa'">
+              			<ion-label class="label-input" stacked>
+                			Tahun Masuk
+              			</ion-label>
+              			<ion-input  type="text" placeholder="{{ tahunMasuk }}" readonly></ion-input>
+            		</ion-item>
+          		</ion-list>
+        	</ion-col>
+      	</ion-row>
+  	</div>
+</ion-content>

@@ -1,0 +1,28 @@
+page-informasi {
+	.icons {
+		position: absolute;
+	    right: 10px;
+	}
+
+	.icon-header {
+		color: white !important;
+	}
+
+	.background-content {
+		background-image: url(../img/backgroundwave2.png);
+		background-size: cover;
+	}
+
+	#list_header {
+		background-color: #7fe67f;
+		margin-top: 5px;
+		margin-left: 10px;
+		margin-right: 10px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	.grid-custom {
+		padding: 0px;
+	}
+}

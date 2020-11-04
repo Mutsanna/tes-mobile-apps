@@ -1,0 +1,42 @@
+<!--
+  Generated template for the InfoSaldoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Informasi Iuran</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="background-content">
+  <ion-row class="card-cust">
+    <ion-col>
+      <ion-row>
+        <ion-col col-8>
+          <ion-label>{{ dataUser?.nama }}</ion-label>
+          <ion-label>{{ dataUser?.username }}</ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-5>
+          <ion-label>Total Tagihan</ion-label>
+          <ion-label>Total Bayar</ion-label>
+          <ion-label>Tunggakan</ion-label>
+        </ion-col>
+        <ion-col col-7>
+          <ion-label class="txt-saldo">{{ totalIuran.totalTagihan | currency : "IDR " }}</ion-label>
+          <ion-label class="txt-saldo">{{ totalIuran.totalBayar | currency : "IDR " }}</ion-label>
+          <ion-label class="txt-saldo">{{ totalIuran.tunggakan | currency : "IDR " }}</ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col text-center>
+      <button ion-button class="btn-cust" (click)="openDetails()">Rincian Iuran</button>
+    </ion-col>
+  </ion-row>
+</ion-content>

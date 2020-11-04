@@ -1,0 +1,16 @@
+page-info-iuran {
+    .card-cust {
+
+        margin: 20px;
+        background: linear-gradient(to right, #396afc, #464d93);
+        padding: 10px;
+        border-radius: 20px;
+
+        ion-label {
+            color: white;
+        }
+        .txt-saldo {
+            text-align: right;
+        }
+    }
+}

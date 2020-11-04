@@ -1,0 +1,7 @@
+{
+  "name": "MadaniSchool",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

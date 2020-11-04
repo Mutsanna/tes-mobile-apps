@@ -1,0 +1,31 @@
+<!--
+  Generated template for the QrRekeningModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Request
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span class="dismiss-button" ion-text color="light" showWhen="ios">Back</span>
+        <ion-icon class="dismiss-button" name="md-close" color="light" showWhen="android, windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+
+    <ngx-qrcode [qrc-value]="qrValue"></ngx-qrcode>
+    <ion-card-content text-center>
+        <h2>Scan QR ini untuk melakukan transfer</h2>
+    </ion-card-content>
+</ion-card>
+
+</ion-content>

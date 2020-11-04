@@ -1,0 +1,25 @@
+page-finance {
+  ion-item {
+    .title {
+      color: map-get($colors, primary);
+      font-weight: bold;
+    }
+    .date {
+      display: flex;
+      justify-content: flex-end;
+      color: map-get($colors, primary);
+    }
+    .price {
+    }
+  }
+
+  .btn-list {
+    margin-top: 15vh;
+    .btn-cust {
+      padding: 25px;
+      margin-bottom: 20px;
+      border-radius: 20px;
+      background-color: #464d93;
+    }
+  }
+}

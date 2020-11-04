@@ -1,0 +1,75 @@
+page-info-nilai {
+	#banner {
+		background-image: url(../img/header.png);
+		background-size: cover;
+		color: white;
+	}
+
+	.toolbar-tabs {
+		background-color: red;
+		padding-right: 0px;
+		padding-left: 0px;
+		padding-bottom: 0px;
+	}
+
+	.toolbar-badge {
+		width: 100%;
+		padding-top: 0px;
+		padding-bottom: 0px;
+		background-image: url(../img/header.png);
+		background-size: cover;
+		color: white;
+	}
+
+	.text-nis {
+		font-size: 1.8rem;
+		margin-bottom: 0px;
+	}
+
+	.text-name {
+		font-size: 1.8rem;
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+
+	.text-class {
+
+	}
+
+	.text-date {
+		font-weight: normal;
+	}
+
+	#list_header {
+		background-color: #7fe67f;
+		margin-top: 5px;
+		margin-left: 10px;
+		margin-right: 10px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	#list_body {
+		padding-left: 0px;
+		margin-left: 10px;
+		margin-right: 10px;
+		font-size: smaller;
+	}
+
+	#list_footer {
+		margin-top: 10px;
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-bottom: 10px;
+		font-size: initial;
+		text-align: center;
+	}
+
+	.grid-custom {
+		padding: 0px;
+	}
+
+	.icon-header {
+		color: white !important;
+	}
+}

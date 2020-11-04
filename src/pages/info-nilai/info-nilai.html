@@ -1,0 +1,165 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>Nilai</ion-title>
+		<ion-buttons end *ngIf="cbView">
+			<button ion-button class="icon-header" (click)="selectSemester()">
+				Pilih Semester
+			</button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+
+
+<ion-content class="background-content">
+	<div>
+		<!-- <div id="banner"> -->
+		<ion-badge class="toolbar-badge">
+			<ion-grid>
+				<ion-row>
+					<ion-col text-left>
+						<ion-label class="text-nis">{{ nis }}</ion-label>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col text-left>
+						<ion-label class="text-name">{{ name }}</ion-label>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col text-left>
+						<ion-label class="text-class">{{ class }}</ion-label>
+					</ion-col>
+					<ion-col text-right>
+						<!-- <ion-datetime class="text-date" displayFormat="DD-MM-YYYY" [(ngModel)]="date"></ion-datetime> -->
+						<ion-label class="text-class">{{ semesterView }}</ion-label>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</ion-badge>
+		<!-- </div> -->
+	</div>
+	<div *ngIf="typeView === 'raport'">
+		<div id="list_header">
+			<ion-grid class="grid-custom">
+				<ion-row>
+					<ion-col col-8>
+						Mata Pelajaran
+					</ion-col>
+					<ion-col>
+
+					</ion-col>
+					<ion-col>
+						Nilai
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</div>
+		<div id="list_body" ion-item *ngFor="let l of list" style="">
+			<ion-grid class="grid-custom">
+				<ion-row>
+					<ion-col col-8>
+						<ion-icon ios="ios-arrow-forward" md="ios-arrow-forward"></ion-icon>
+						{{ l.matpel }}
+					</ion-col>
+					<ion-col>
+
+					</ion-col>
+					<ion-col>
+						{{ l.nilai }}
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</div>
+		<div id="chart_pos" style="padding: 10px 10px 10px 10px;">
+			<canvas id="line_chart"></canvas>
+		</div>
+	</div>
+	<div *ngIf="typeView === 'ulangan'">
+		<div *ngFor="let lu of listUlangan">
+			<div id="list_header">
+				<ion-grid class="grid-custom">
+					<ion-row>
+						<ion-col>
+							{{ lu.matpel }}
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</div>
+
+			<div ion-item>
+				<ion-grid class="grid-custom">
+					<ion-row>
+						<ion-col>
+							Harian
+						</ion-col>
+						<ion-col col-7>
+							Tanggal
+						</ion-col>
+						<ion-col text-center>
+							Nilai
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</div>
+
+			<div id="list_body" ion-item *ngFor="let d of lu.detail">
+				<ion-grid class="grid-custom">
+					<ion-row>
+						<ion-col text-center>
+							{{ d.ulangan_ke }}
+						</ion-col>
+						<ion-col col-7>
+							{{ d.tanggal }}
+						</ion-col>
+						<ion-col text-center>
+							{{ d.nilai }}
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</div>
+		</div> 
+		<div *ngFor="let mapel of namaMatpel, let i = index">
+			<div id="list_header">
+				<ion-grid class="grid-custom">
+					<ion-row>
+						<ion-col>
+							{{ mapel }}
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</div>
+
+			<div ion-item>
+				<ion-grid class="grid-custom">
+					<ion-row>
+						<ion-col>
+							Harian
+						</ion-col>
+						<ion-col col-7>
+							Tanggal
+						</ion-col>
+						<ion-col text-center>
+							Nilai
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</div>
+
+			<div id="list_body" ion-item *ngFor="let d of dataNilai[i]">
+				<ion-grid class="grid-custom">
+					<ion-row>
+						<ion-col text-center>
+							{{ d.ulangan_ke }}
+						</ion-col>
+						<ion-col col-7>
+							{{ d.tanggal }}
+						</ion-col>
+						<ion-col text-center>
+							{{ d.nilai }}
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+			</div>
+		</div>
+	</div>
+</ion-content>

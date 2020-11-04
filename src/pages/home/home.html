@@ -1,0 +1,61 @@
+<ion-header>
+  	<ion-navbar color="navbarColor">
+  		<button ion-button menuToggle>
+      		<ion-icon name="menu"></ion-icon>
+    	</button>
+    	<ion-title>Home</ion-title>
+  	</ion-navbar>
+</ion-header>
+
+
+<ion-content class="background-content">
+	<div id="banner">
+		<div>&nbsp;</div>
+		<div>
+			<!-- <h5 align="center" style="margin-top: 5%;color: white;">Madani School System</h5> -->
+			<h5 align="center" style="margin-top: 5%;color: white;">Buah Hati Islamic School</h5>
+			<!-- <h1 align="center" style="padding-bottom: 15px;color: white;">Marketing Demo</h1> -->
+		</div>
+	</div>
+	
+	<div>
+		<ion-grid>
+			<ion-row *ngIf="group === 'siswa'">
+				<ion-col col-3 text-center>
+					<img src="img/kehadiran.png" style="width: 100%; height: 100%" (click)="openAbsensi()" />
+				</ion-col>
+				<ion-col col-3 text-center>
+					<img src="img/Madani-Nilai.png" style="width: 100%; height: 100%" (click)="openNilai()" />
+				</ion-col>
+				<ion-col col-3 text-center>
+					<img src="img/Madani-Informasi.png" style="width: 100%; height: 100%" (click)="openInformasi()" />
+					<ion-badge class="notif-badges" color="danger" *ngIf="notifInformasi">{{ notifInformasi }}</ion-badge>
+				</ion-col>
+				<ion-col col-3 text-center>
+					<img src="img/Madani-Pesan.png" style="width: 100%; height: 100%" (click)="openPesan()" />
+					<ion-badge class="notif-badges" color="danger">{{ countPesan }}</ion-badge>
+				</ion-col>
+				<ion-col col-3 text-center>
+					<img src="img/Kalender_Akademik.png" style="width: 100%; height: 100%" (click)="openKalender()" />
+				</ion-col>
+			</ion-row>
+			<ion-row *ngIf="group === 'guru'">
+				<ion-col col-3 text-center>
+					<img src="img/kehadiran.png" style="width: 100%; height: 100%" (click)="openAbsensi()" />
+				</ion-col>
+				<ion-col col-3 text-center>
+					<img src="img/Madani-Informasi.png" style="width: 100%; height: 100%" (click)="openInformasi()" />
+					<ion-badge class="notif-badges" color="danger" *ngIf="notifInformasi">{{ notifInformasi }}</ion-badge>
+				</ion-col>
+				<ion-col col-3 text-center>
+					<img src="img/Madani-Pesan.png" style="width: 100%; height: 100%" (click)="openPesan()" />
+					<ion-badge class="notif-badges" color="danger">{{ countPesan }}</ion-badge>
+				</ion-col>
+				<ion-col col-3 text-center>
+					<img src="img/Kalender_Akademik.png" style="width: 100%; height: 100%" (click)="openKalender()" />
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</div>
+	<!-- <img src="{{ imageTest }}" style="width: 100%; height: 100%" /> -->
+</ion-content>

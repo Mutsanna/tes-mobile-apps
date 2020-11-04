@@ -1,0 +1,30 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>Informasi</ion-title>
+		<ion-buttons end *ngIf="group === 'WaliKelas'">
+		    <button ion-button class="icon-header" (click)="buatInformasi()">
+		    	Buat Informasi
+		    </button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="background-content">
+	<div id="list_header" *ngIf="count === 0">
+		<ion-grid class="grid-custom">
+			<ion-row>
+				<ion-col col-8>
+					Tidak ada Informasi
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</div>
+	<ion-list>
+	    <button ion-item *ngFor="let info of infoList" icon-right color="light" full (click)="infoSelected(info)">
+	      	{{ info.judulInformasi }} &nbsp;
+	      	<ion-badge class="notif-badges" color="danger" *ngIf="info.isRead === '0'">Baru</ion-badge>
+	      	<ion-icon name="arrow-forward" class="icons"></ion-icon>
+	    </button>
+  	</ion-list>
+</ion-content>

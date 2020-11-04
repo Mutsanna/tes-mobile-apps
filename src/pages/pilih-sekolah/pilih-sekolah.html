@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-navbar color="navbarColor">
+        <ion-title>Pilih Sekolah</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="background-content">
+    <ion-grid>
+        <ion-row>
+            <ion-col text-center col-4 *ngFor="let l of sekolahList">
+                <div class="div-logo" (click)="sekolahSelected(l)">
+                    <img src="{{ l.logo_sekolah }}" class="img-logo" />
+                </div>
+                <div>
+                    <b>{{ l.nama_sekolah }}</b>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
